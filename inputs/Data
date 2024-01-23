@@ -1,0 +1,18 @@
+install.packages("opendatatoronto")
+install.packages("knitr")
+install.packages("janitor")
+install.packages("dplyr")
+install.packages("readr")
+install.packages("usethis")
+install.packages("gitcreds")
+install.packages("tidyverse")
+install.packages("reprex")
+install.packages("tidyr")
+
+#### Acquire data - read uneditted data ####
+raw_data <-
+  read_csv(
+    file = "shootings-firearm-discharges.csv",
+    show_col_types = FALSE)
+
+write_csv(x = raw_data, file = "shootings-firearm-discharges.csv")
